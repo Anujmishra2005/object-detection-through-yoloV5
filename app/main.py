@@ -5,7 +5,8 @@ import torch
 app = Flask(__name__)
 
 # Load YOLOv5 model
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # Or use custom model path
+model = torch.hub.load('ultralytics/yolov5', 'yolov5s', trust_repo=True)
+  # Or use custom model path
 
 # Globals
 cap = None
