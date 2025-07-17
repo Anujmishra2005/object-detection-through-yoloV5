@@ -1,6 +1,7 @@
 flask
 opencv-python
 torch
+seaborn
 ultralytics
 gunicorn
 scikit-learn
