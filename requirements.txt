@@ -1,6 +1,7 @@
 flask
 opencv-python
 torch
+gunicorn
 scikit-learn
 numpy
 matplotlib
