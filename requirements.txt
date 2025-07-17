@@ -1,0 +1,7 @@
+flask
+opencv-python
+torch
+scikit-learn
+numpy
+matplotlib
+pyyaml

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YOLOv5 LiveStream | Real-Time Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0e0e0e;
+            color: #f1f1f1;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 32px;
+            background: #1e1e1e;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+
+        .navbar h1 {
+            font-size: 1.5rem;
+            color: #00ffcc;
+            margin: 0;
+        }
+
+        .navbar a {
+            color: #f1f1f1;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #00ffcc;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #00ffcc;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #c0c0c0;
+        }
+
+        /* Buttons */
+        .controls {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 30px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .start-btn {
+            background-color: #00ffcc;
+            color: #000;
+        }
+
+        .stop-btn {
+            background-color: #ff4d4d;
+            color: #fff;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        .status {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #00ffcc;
+        }
+
+        /* Video */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .video-container img {
+            width: 90%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 255, 204, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .video-container img:hover {
+            box-shadow: 0 0 40px rgba(0, 255, 204, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #1e1e1e;
+            color: #888;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #00ffcc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .navbar h1 {
+                font-size: 1.2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                width: 80%;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>YOLOv5 LiveStream</h1>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Real-Time Object Detection</h2>
+        <p>Powered by YOLOv5 and Flask | Watch object detection live in your browser.</p>
+    </section>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button class="btn start-btn" onclick="startCamera()">▶ Start Camera</button>
+        <button class="btn stop-btn" onclick="stopCamera()">⏹ Stop Camera</button>
+    </div>
+
+    <!-- Status -->
+    <div class="status" id="status">Status: Offline</div>
+
+    <!-- Video Stream -->
+    <div class="video-container">
+        <img id="videoFeed" src="">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Made with ❤️ using Flask & YOLOv5<br>
+        <a href="#">Privacy</a> |
+        <a href="#">GitHub</a> |
+        <a href="#">API Docs</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function startCamera() {
+            fetch('/start_camera', { method: 'POST' });
+            document.getElementById("videoFeed").src = "/video_feed";
+            document.getElementById("status").innerText = "Status: Online";
+            document.getElementById("status").style.color = "#00ffcc";
+        }
+
+        function stopCamera() {
+            fetch('/stop_camera', { method: 'POST' });
+            document.getElementById("videoFeed").src = "";
+            document.getElementById("status").innerText = "Status: Offline";
+            document.getElementById("status").style.color = "#ff4d4d";
+        }
+    </script>
+</body>
+</html>
