@@ -39,7 +39,21 @@ The [COCO dataset](https://www.kaggle.com/datasets/andrewmvd/coco2017) (Common O
    git clone https://github.com/your-username/yolov5-object-detection.git
    cd yolov5-object-detection
 
+## 📊 Evaluation Metrics
+- mAP (mean Average Precision)
+- IoU (Intersection over Union)
+- Precision & Recall
 
+## 📁 Project Structure
+
+yolov5-object-detection/
+├── data/
+├── notebooks/
+├── outputs/
+├── detect.py
+├── train.py
+├── requirements.txt
+└── README.md
 
 ## 🤝 Acknowledgements
 - [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5)
