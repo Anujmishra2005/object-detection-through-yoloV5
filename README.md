@@ -34,10 +34,18 @@ The [COCO dataset](https://www.kaggle.com/datasets/andrewmvd/coco2017) (Common O
 
 ## 📦 Installation
 
-1. **Clone this repository**
-   ```bash
-   git clone https://github.com/your-username/yolov5-object-detection.git
-   cd yolov5-object-detection
+git clone https://github.com/your-username/yolov5-object-detection.git
+cd yolov5-object-detection
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+git clone https://github.com/ultralytics/yolov5
+cd yolov5
+pip install -r requirements.txt
+
+## 🚀 How to Run
+
+python detect.py --weights yolov5s.pt --img 640 --conf 0.25 --source your_input_image_or_video.mp4
 
 ## 📊 Evaluation Metrics
 - mAP (mean Average Precision)
