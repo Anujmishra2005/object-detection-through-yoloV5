@@ -16,11 +16,14 @@ An individual project focused on real-time object detection using the YOLOv5 (Yo
 - **Jupyter Notebook**
 
 ## 📌 Features
-- 🧹 Cleaned and preprocessed data to enhance model accuracy.
-- 🧠 Trained YOLOv5 model on the COCO dataset to detect **80 object classes**.
-- 🚀 Optimized model using PyTorch for faster inference and better precision.
-- 🎯 Real-time object detection with high accuracy using bounding boxes.
-- 📊 Evaluated model using standard performance metrics (mAP, IoU, Precision, Recall).
+- 🧹 Cleaned and preprocessed COCO dataset for improved learning efficiency.
+- 🧠 Trained a YOLOv5 model (v5s) to detect and classify **80 object classes**.
+- ⚙️ Fine-tuned model hyperparameters (learning rate, batch size, epochs) for optimal accuracy.
+- 🚀 Used PyTorch for high-performance training on GPU with mixed-precision.
+- 🎯 Performed real-time detection on images, videos, and webcam feed.
+- 📊 Evaluated using standard metrics like **mAP@0.5**, **IoU**, **Precision**, and **Recall**.
+- 🧪 Visualized predictions with bounding boxes and labels using OpenCV and Matplotlib.
+- ☁️ Scalable for training on custom datasets (labelled with Roboflow or LabelImg).
 
 ## 🗂 Dataset
 The [COCO dataset](https://www.kaggle.com/datasets/andrewmvd/coco2017) (Common Objects in Context) is used for training and validation. It contains over 200,000 labeled images across 80 object categories.
