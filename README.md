@@ -38,3 +38,16 @@ The [COCO dataset](https://www.kaggle.com/datasets/andrewmvd/coco2017) (Common O
    ```bash
    git clone https://github.com/your-username/yolov5-object-detection.git
    cd yolov5-object-detection
+
+
+
+## 🤝 Acknowledgements
+- [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5)
+- [COCO Dataset](https://cocodataset.org)
+- [OpenCV](https://opencv.org/)
+- [PyTorch](https://pytorch.org/)
+
+## 📬 Contact
+Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/anujmishra05/) or check out my [Portfolio](https://professional-portfolio-plum.vercel.app/)
+
+⭐️ Star this repo if you found it useful!
