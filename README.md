@@ -76,3 +76,16 @@ yolov5-object-detection/
 Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/anujmishra05/) or check out my [Portfolio](https://professional-portfolio-plum.vercel.app/)
 
 ⭐️ Star this repo if you found it useful!
+
+🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+
+Fork the repo
+
+Create a new branch (git checkout -b feature/your-feature)
+
+Commit your changes (git commit -m 'Add your feature')
+
+Push to the branch (git push origin feature/your-feature)
+
+Open a Pull Request
