@@ -69,3 +69,72 @@ pip install -r requirements.txt
 git clone https://github.com/ultralytics/yolov5
 cd yolov5
 pip install -r requirements.txt
+```
+
+---
+
+## 🚀 How to Run
+
+```bash
+python detect.py --weights yolov5s.pt --img 640 --conf 0.25 --source your_input_image_or_video.mp4
+```
+
+---
+
+## 📊 Evaluation Metrics
+- `mAP@0.5` (Mean Average Precision)
+- `IoU` (Intersection over Union)
+- `Precision` and `Recall`
+
+---
+
+## 🗂️ Project Structure
+
+```
+yolov5-object-detection/
+├── data/
+├── notebooks/
+├── outputs/
+├── detect.py
+├── train.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🙏 Acknowledgements
+- [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5)
+- [COCO Dataset](https://cocodataset.org)
+- [OpenCV](https://opencv.org/)
+- [PyTorch](https://pytorch.org/)
+
+---
+
+## 📬 Contact
+
+- 🔗 [LinkedIn – Anuj Mishra](https://www.linkedin.com/in/anujmishra05/)
+- 🌐 [Portfolio Website](https://professional-portfolio-plum.vercel.app/)
+
+---
+
+## 🌟 Contributing
+
+Contributions are welcome! Here's how you can contribute:
+
+```bash
+# Fork the repository
+git checkout -b feature/your-feature-name
+
+# Make changes and commit
+git commit -m "Add your feature"
+
+# Push your branch
+git push origin feature/your-feature-name
+
+# Create a Pull Request
+```
+
+---
+
+⭐️ **Star this repository** if you found it helpful!
