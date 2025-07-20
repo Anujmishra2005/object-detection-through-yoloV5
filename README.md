@@ -1,48 +1,53 @@
-# 🧠 Object Detection and Recognition using YOLOv5
+# 🧠 Object Detection & Recognition using YOLOv5
 
-A solo project focused on real-time object detection using **YOLOv5** (You Only Look Once), trained on the **COCO 2017** dataset. This project demonstrates how to **train, evaluate, and deploy** a deep learning model for object detection using PyTorch, OpenCV, and Jupyter Notebook.
-
----
-
-## 📅 Project Duration
-**January 2025 – February 2025**
+A solo end-to-end deep learning project demonstrating real-time object detection and classification using the **YOLOv5 (You Only Look Once)** architecture. This project is built to show how to **train, evaluate, and deploy** an object detection system using **PyTorch**, **OpenCV**, and **Jupyter Notebook**, with the **COCO dataset** as the training source.
 
 ---
 
-## 🛠️ Tech Stack
-- 🔍 **Computer Vision**
-- 🧠 **Machine Learning**
-- 🗣️ **Natural Language Processing**
-- ⚙️ **YOLOv5 (v5s)**
-- 🔥 **PyTorch**
-- 🖼️ **COCO Dataset (via Kaggle)**
-- 📷 **OpenCV**
-- 📓 **Jupyter Notebook**
+## 📅 Project Timeline
+**Duration:** January 2025 – February 2025  
+**Author:** Anuj Mishra  
+**Status:** Completed ✅
 
 ---
 
-## 🌟 Key Features
-- ✅ **Cleaned and preprocessed** the COCO dataset for optimal training.
-- 📌 **Trained YOLOv5s** on 80 object categories with real-world variability.
-- 🎯 **Fine-tuned hyperparameters**: learning rate, batch size, epochs, etc.
-- ⚡ **Optimized GPU training** using PyTorch with AMP (Automatic Mixed Precision).
-- 📷 **Real-time object detection** on images, videos, and webcam feed.
-- 📈 **Evaluated with industry-standard metrics**: mAP@0.5, IoU, Precision, Recall.
-- 🧾 **Visualized bounding boxes** and labels using OpenCV and Matplotlib.
-- ☁️ **Ready for custom dataset training** using tools like Roboflow or LabelImg.
+## 🚀 Overview
+
+This project leverages **YOLOv5s** for detecting and recognizing objects across **80 object categories** from the COCO dataset. It includes:
+- Data preprocessing
+- Model training
+- Evaluation with industry-standard metrics
+- Real-time inference
+- Customizability for future datasets
 
 ---
 
-## 📂 Dataset
+## 🧰 Tech Stack
 
-Used the [COCO 2017 dataset](https://www.kaggle.com/datasets/andrewmvd/coco2017) (Common Objects in Context), containing:
-- 200,000+ labeled images
-- 80 distinct object categories
-- Diverse contexts, angles, and lighting conditions
+| Category              | Tools & Frameworks                                           |
+|-----------------------|--------------------------------------------------------------|
+| Deep Learning         | PyTorch, YOLOv5                                              |
+| Computer Vision       | OpenCV, Roboflow, COCO Dataset                               |
+| Visualization         | Matplotlib, Seaborn                                          |
+| Development Tools     | Jupyter Notebook, Python (venv), Git                         |
+| Deployment Readiness  | CLI Interface, Webcam/Video/Image Input Support              |
 
 ---
 
-## 🖼️ Sample Outputs
+## ✨ Key Features
+
+- 🧹 **Data Preprocessing**: COCO dataset cleaned, normalized, and augmented.
+- 🏷️ **Multi-Class Detection**: Supports detection of 80 classes like `person`, `car`, `dog`, etc.
+- 🎯 **Hyperparameter Tuning**: Custom learning rate, batch size, and training epochs.
+- ⚡ **Optimized Training**: Utilized GPU acceleration with PyTorch’s AMP for mixed precision.
+- 📸 **Real-Time Detection**: Detects objects from webcam, video streams, and static images.
+- 📊 **Evaluation Metrics**: Supports `mAP@0.5`, `IoU`, `Precision`, and `Recall`.
+- 🧪 **Visual Debugging**: Draws bounding boxes with confidence scores using OpenCV.
+- 📁 **Custom Dataset Support**: Ready-to-train on your own data via Roboflow or LabelImg.
+
+---
+
+## 🖼 Sample Outputs
 
 | Input Image | YOLOv5 Prediction |
 |-------------|-------------------|
@@ -51,21 +56,48 @@ Used the [COCO 2017 dataset](https://www.kaggle.com/datasets/andrewmvd/coco2017)
 
 ---
 
-## 📦 Installation Guide
+## 🗂 Project Structure
+
+```
+yolov5-object-detection/
+├── yolov5/                  # YOLOv5 repo from Ultralytics
+├── data/                    # Contains dataset config & YAML
+├── notebooks/               # Jupyter notebooks for EDA and experiments
+├── outputs/                 # Inference results and prediction images
+├── detect.py                # Script to run detection on inputs
+├── train.py                 # YOLOv5 model training script
+├── requirements.txt         # Python dependencies
+└── README.md                # Project documentation
+```
+
+---
+
+## 🧪 Evaluation Metrics
+
+| Metric       | Description                                      |
+|--------------|--------------------------------------------------|
+| **mAP@0.5**  | Mean Average Precision at 0.5 IoU                |
+| **IoU**      | Intersection over Union for overlap accuracy     |
+| **Precision**| Fraction of correct positive predictions         |
+| **Recall**   | Fraction of actual positives correctly detected  |
+
+---
+
+## 📦 Setup Instructions
 
 ```bash
-# Clone your repo
+# Step 1: Clone the repository
 git clone https://github.com/your-username/yolov5-object-detection.git
 cd yolov5-object-detection
 
-# Setup virtual environment
+# Step 2: Create and activate virtual environment
 python -m venv venv
-source venv/bin/activate  # use venv\Scripts\activate on Windows
+source venv/bin/activate          # On Windows use: venv\Scripts\activate
 
-# Install dependencies
+# Step 3: Install dependencies
 pip install -r requirements.txt
 
-# Clone YOLOv5 from Ultralytics
+# Step 4: Clone YOLOv5 from Ultralytics
 git clone https://github.com/ultralytics/yolov5
 cd yolov5
 pip install -r requirements.txt
@@ -73,68 +105,93 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 How to Run
+## ▶️ Run Inference
+
+Detect objects from an image, video, or webcam using the command line:
 
 ```bash
-python detect.py --weights yolov5s.pt --img 640 --conf 0.25 --source your_input_image_or_video.mp4
+# Run detection on image/video/webcam
+python detect.py --weights yolov5s.pt --img 640 --conf 0.25 --source input.jpg
 ```
+
+**Parameters:**
+- `--weights`: Path to YOLOv5 trained model (default: `yolov5s.pt`)
+- `--img`: Input image resolution (e.g., 640)
+- `--conf`: Confidence threshold (default: 0.25)
+- `--source`: Input source (image path, video file, webcam index)
 
 ---
 
-## 📊 Evaluation Metrics
-- `mAP@0.5` (Mean Average Precision)
-- `IoU` (Intersection over Union)
-- `Precision` and `Recall`
+## 📁 Dataset Used
+
+- **Dataset:** [COCO 2017](https://www.kaggle.com/datasets/andrewmvd/coco2017)
+- **Source:** Kaggle / COCO Official
+- **Content:** 200K+ labeled images across 80 categories
+
+E.g.:
+- Person
+- Bicycle
+- Car
+- Dog
+- Truck
+- Airplane
+- TV, Laptop, Bottle, Chair... etc.
 
 ---
 
-## 🗂️ Project Structure
+## 🧠 Training Details
 
-```
-yolov5-object-detection/
-├── data/
-├── notebooks/
-├── outputs/
-├── detect.py
-├── train.py
-├── requirements.txt
-└── README.md
-```
+- **Architecture:** YOLOv5s (smallest variant)
+- **Batch Size:** 16
+- **Epochs:** 100
+- **Optimizer:** SGD
+- **Learning Rate:** 0.01
+- **Loss Functions:** GIoU loss, Objectness loss, Classification loss
 
 ---
 
-## 🙏 Acknowledgements
-- [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5)
-- [COCO Dataset](https://cocodataset.org)
+## 🙌 Acknowledgements
+
+Special thanks to:
+- [Ultralytics – YOLOv5](https://github.com/ultralytics/yolov5)
+- [COCO Dataset](https://cocodataset.org/)
+- [Roboflow](https://roboflow.com)
 - [OpenCV](https://opencv.org/)
 - [PyTorch](https://pytorch.org/)
 
 ---
 
-## 📬 Contact
+## 💬 Contact
 
-- 🔗 [LinkedIn – Anuj Mishra](https://www.linkedin.com/in/anujmishra05/)
-- 🌐 [Portfolio Website](https://professional-portfolio-plum.vercel.app/)
+📧 **Anuj Mishra**  
+🔗 [LinkedIn](https://www.linkedin.com/in/anujmishra05/)  
+🌐 [Portfolio Website](https://professional-portfolio-plum.vercel.app/)  
+🐙 [GitHub](https://github.com/Anujmishra2005)
 
 ---
 
-## 🌟 Contributing
+## 🤝 Contributing
 
-Contributions are welcome! Here's how you can contribute:
+Contributions are welcome! Here's how to get started:
 
 ```bash
-# Fork the repository
-git checkout -b feature/your-feature-name
+# Step 1: Fork this repo
+# Step 2: Create a feature branch
+git checkout -b feature/your-feature
 
-# Make changes and commit
-git commit -m "Add your feature"
+# Step 3: Make your changes and commit
+git commit -m "Added new feature X"
 
-# Push your branch
-git push origin feature/your-feature-name
+# Step 4: Push to GitHub
+git push origin feature/your-feature
 
-# Create a Pull Request
+# Step 5: Open a Pull Request!
 ```
 
 ---
 
-⭐️ **Star this repository** if you found it helpful!
+## ⭐️ Show Your Support
+
+If you found this project helpful, please consider **starring** 🌟 the repository. It helps others discover the project and motivates further improvements.
+
+---
