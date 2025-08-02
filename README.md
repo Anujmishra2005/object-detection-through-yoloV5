@@ -46,7 +46,6 @@ YOLOv5 is one of the fastest and most accurate object detection models. This pro
 - Transfer learning on custom datasets
 
 ---
-
 ## 🧰 Tech Stack
 
 | Category         | Tools & Frameworks                      |
