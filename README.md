@@ -17,7 +17,6 @@
 **Status:** ✅ Production-ready
 
 ---
-
 ## 📚 Table of Contents
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
